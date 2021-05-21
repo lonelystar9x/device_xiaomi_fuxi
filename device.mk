@@ -361,6 +361,7 @@ PRODUCT_PACKAGES += \
     SettingsResCommon \
     SettingsOverlayChina \
     SettingsOverlayGlobal \
+    SettingsProvider \
     TelephonyResCommon \
     SystemUIResFuxi \
     WifiResCommon \
