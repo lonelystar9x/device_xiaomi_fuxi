@@ -121,6 +121,9 @@ echo 4-7 > /dev/cpuset/foreground/boost/cpus
 echo 0-7 > /dev/cpuset/top-app/cpus
 # END Performance_SmartCPUPolicy
 
+# Set restricted cpuset to the same CPUs as system-background
+cat /dev/cpuset/system-background/cpus > /dev/cpuset/restricted/cpus
+
 # Turn off scheduler boost at the end
 echo 0 > /proc/sys/walt/sched_boost
 
