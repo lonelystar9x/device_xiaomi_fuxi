@@ -113,14 +113,7 @@ echo $silver_early_upmigrate $gold_early_upmigrate > /proc/sys/walt/sched_early_
 echo 325 > /proc/sys/walt/walt_low_latency_task_threshold
 
 # MIUI MOD: Performance_SmartCPUPolicy
-# cpuset parameters
 echo 0-1 > /dev/cpuset/background/cpus
-# echo 0-2 > /dev/cpuset/system-background/cpus
-echo 0-3 > /dev/cpuset/system-background/cpus
-echo 0-6 > /dev/cpuset/foreground/cpus
-echo 4-7 > /dev/cpuset/foreground/boost/cpus
-echo 0-7 > /dev/cpuset/top-app/cpus
-# END Performance_SmartCPUPolicy
 
 # Set restricted cpuset to the same CPUs as system-background
 cat /dev/cpuset/system-background/cpus > /dev/cpuset/restricted/cpus
