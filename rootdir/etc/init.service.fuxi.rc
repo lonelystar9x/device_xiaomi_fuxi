@@ -39,6 +39,11 @@ service ssgqmigd /vendor/bin/ssgqmigd64
     group radio gps system
     socket ssgqmig seqpacket 0660 radio inet
 
+# Libperf
+on property:sys.boot_completed=1
+    # Enable PowerHAL hint processing
+    setprop vendor.powerhal.init 1
+
 # Thermal
 on property:vendor.post_boot.parsed=1
     # Set default thermal profile
