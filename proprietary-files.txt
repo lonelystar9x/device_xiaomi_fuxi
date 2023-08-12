@@ -2890,7 +2890,6 @@ odm/firmware/190_signalTransitionLight_P_RTP.bin
 odm/firmware/191_signalTransition_P_RTP.bin
 odm/firmware/192_hapticsVideo_RTP.bin
 odm/firmware/19_ringTone4_RTP.bin
-odm/firmware/1_doubelClick_P_RTP.bin:vendor/firmware/1_doubelClick_P_RTP.bin
 odm/firmware/20_ringTone4_RTP.bin
 odm/firmware/23_Candy_P_RTP.bin
 odm/firmware/24_Carousel_P_RTP.bin
@@ -2930,7 +2929,6 @@ odm/firmware/56_Crystal_P_RTP.bin
 odm/firmware/57_FadeIn_P_RTP.bin
 odm/firmware/58_FadeOut_P_RTP.bin
 odm/firmware/59_Flute_P_RTP.bin
-odm/firmware/5_heavyClick_P_RTP.bin:vendor/firmware/5_heavyClick_P_RTP.bin
 odm/firmware/60_Fresh_P_RTP.bin
 odm/firmware/61_Frog_P_RTP.bin
 odm/firmware/62_Guitar_P_RTP.bin
