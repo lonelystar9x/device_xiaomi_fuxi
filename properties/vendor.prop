@@ -365,3 +365,6 @@ ro.qcom.adreno.qgl.ShaderStorageImageExtendedFormats=0
 
 # Zygote
 zygote.critical_window.minute=10
+
+# shutdown
+ro.build.shutdown_timeout=0
