@@ -451,6 +451,7 @@ PRODUCT_PACKAGES += \
 # Rootdir
 PRODUCT_PACKAGES += \
     fstab.qcom \
+    fstab.zram \
     init.class_main.sh \
     init.kernel.post_boot-kalama.sh \
     init.qcom.class_core.sh \
