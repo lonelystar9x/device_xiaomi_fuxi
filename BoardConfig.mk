@@ -224,7 +224,7 @@ DEVICE_MATRIX_FILE := $(DEVICE_PATH)/configs/vintf/compatibility_matrix.xml
 DEVICE_MANIFEST_KALAMA_FILES := \
     $(DEVICE_PATH)/configs/vintf/manifest_kalama.xml \
     $(DEVICE_PATH)/configs/vintf/manifest_xiaomi.xml
-
+DEVICE_FRAMEWORK_MANIFEST_FILE += $(DEVICE_PATH)/framework_manifest.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     $(DEVICE_PATH)/configs/vintf/compatibility_matrix.device.xml \
     $(DEVICE_PATH)/configs/vintf/compatibility_matrix.xiaomi.xml \
