@@ -114,7 +114,7 @@ echo 325 > /proc/sys/walt/walt_low_latency_task_threshold
 
 # MIUI MOD: Performance_SmartCPUPolicy
 # cpuset parameters
-echo 0-2 > /dev/cpuset/background/cpus
+echo 0-1 > /dev/cpuset/background/cpus
 # echo 0-2 > /dev/cpuset/system-background/cpus
 echo 0-3 > /dev/cpuset/system-background/cpus
 echo 4-7 > /dev/cpuset/foreground/boost/cpus
