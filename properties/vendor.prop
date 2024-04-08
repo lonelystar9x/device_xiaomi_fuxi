@@ -247,6 +247,10 @@ sys.haptic.runin=13
 sys.haptic.intensityforkeyboard=true
 sys.haptic.device_type=agm
 
+# HWUI
+debug.hwui.use_hint_manager=true
+debug.hwui.target_cpu_time_percent=30
+
 # Incremental
 ro.incremental.enable=yes
 
