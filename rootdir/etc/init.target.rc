@@ -555,6 +555,10 @@ on property:vendor.post_boot.parsed=1
     write /proc/irq/208/smp_affinity_list 1
     write /proc/irq/253/smp_affinity_list 2
 
+    # Kill WALT CPU input boost
+    write /proc/sys/walt/input_boost/input_boost_freq "0 0 0 0 0 0 0"
+    write /proc/sys/walt/input_boost/input_boost_ms 0
+
 on property:vendor.minetd.low_budget=0
     write /proc/sys/net/core/netdev_budget_usecs "8000"
     write /proc/sys/net/core/dev_weight "64"
