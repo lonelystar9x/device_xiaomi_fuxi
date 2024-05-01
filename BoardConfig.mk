@@ -67,6 +67,8 @@ BOARD_KERNEL_CMDLINE := \
     msm_rtb.filter=0x237 \
     pcie_ports=compat \
     service_locator.enable=1 \
+    rcu_nocbs=all \
+    rcutree.enable_rcu_lazy=1 \
     swinfo.fingerprint=$(LINEAGE_VERSION) \
     mtdoops.fingerprint=$(LINEAGE_VERSION)
 
