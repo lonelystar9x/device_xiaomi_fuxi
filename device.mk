@@ -310,10 +310,6 @@ PRODUCT_PACKAGES += \
     libsfplugin_ccodec_utils.vendor \
     libstagefrighthw
 
-PRODUCT_PACKAGES += \
-    init.qti.media.rc \
-    init.qti.media.sh
-
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/codecs/media_codecs_c2_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2_audio.xml \
     $(LOCAL_PATH)/audio/codecs/media_codecs_vendor_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_vendor_audio.xml

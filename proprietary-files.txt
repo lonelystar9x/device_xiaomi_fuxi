@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
-## are from Xiaomi 13 (V14.0.6.0.UMCMIXM). 
+## are from Xiaomi 13 (OS1.0.3.0.UMCMIXM). 
 
 # ACDBs
 vendor/etc/acdbdata/IDP_UPD/IDP_UPD_acdb_cal.acdb
@@ -216,7 +216,9 @@ vendor/lib64/libhfp_pal.so
 vendor/lib64/libkaraokepal.so
 vendor/lib64/liblx-ar_util.so
 -vendor/lib64/liblx-osal.so
+vendor/lib64/libfcsam.so
 vendor/lib64/libmcs.so
+vendor/lib64/libmisfpsop.so
 vendor/lib64/libmisight.so
 vendor/lib64/libmisoundsa.so
 vendor/lib64/libmispowerop.so
@@ -302,7 +304,7 @@ vendor/etc/init/hw/init.batterysecret.rc
 
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.1-service-qti
-vendor/etc/init/android.hardware.bluetooth@1.1-service-qti-debug.rc:vendor/etc/init/android.hardware.bluetooth@1.1-service-qti.rc
+vendor/etc/init/android.hardware.bluetooth@1.1-service-qti.rc
 vendor/etc/vintf/manifest/bluetooth_audio.xml
 vendor/etc/vintf/manifest/bttpi-saidl.xml
 vendor/lib64/hw/android.hardware.bluetooth.audio-impl-qti.so
@@ -499,8 +501,11 @@ odm/etc/camera/resources/render/glsl/binShaders32/shader_GLPROGRAM_FACIALREFINE_
 odm/etc/camera/resources/render/glsl/binShaders32/shader_GLPROGRAM_FACIALREFINE_NORMAL_WARP_Define_USE_EG_PRESERV.bin
 odm/etc/camera/resources/render/glsl/binShaders32/shader_GLPROGRAM_FACIALREFINE_NORMAL_WARP_Define_USE_EG_PRESERV_DEF_CATMULL_ROM.bin
 odm/etc/camera/resources/render/glsl/binShaders32/shader_GLPROGRAM_FACIALREFINE_V2_BASE_FUSE_OFFSET.bin
+odm/etc/camera/resources/render/glsl/binShaders32/shader_GLPROGRAM_FACIALREFINE_V2_BASE_FUSE_OFFSET_Define_NEED_REFINE.bin
 odm/etc/camera/resources/render/glsl/binShaders32/shader_GLPROGRAM_FACIALREFINE_V2_BASE_FUSE_OFFSET_Define_USE_SPLIT.bin
+odm/etc/camera/resources/render/glsl/binShaders32/shader_GLPROGRAM_FACIALREFINE_V2_BASE_FUSE_OFFSET_Define_USE_SPLIT_NEED_REFINE.bin
 odm/etc/camera/resources/render/glsl/binShaders32/shader_GLPROGRAM_FACIALREFINE_V2_EYE_FUSE_OFFSET.bin
+odm/etc/camera/resources/render/glsl/binShaders32/shader_GLPROGRAM_FACIALREFINE_V2_EYE_FUSE_OFFSET_Define_NEED_REFINE.bin
 odm/etc/camera/resources/render/glsl/binShaders32/shader_GLPROGRAM_FACIALREFINE_V2_WARP.bin
 odm/etc/camera/resources/render/glsl/binShaders32/shader_GLPROGRAM_FACIALREFINE_V2_WARP_Define_DEF_CATMULL_ROM.bin
 odm/etc/camera/resources/render/glsl/binShaders32/shader_GLPROGRAM_FACIALREFINE_V2_WARP_Define_DEF_M.bin
@@ -578,8 +583,11 @@ odm/etc/camera/resources/render/glsl/binShaders64/shader_GLPROGRAM_FACIALREFINE_
 odm/etc/camera/resources/render/glsl/binShaders64/shader_GLPROGRAM_FACIALREFINE_NORMAL_WARP_Define_USE_EG_PRESERV.bin
 odm/etc/camera/resources/render/glsl/binShaders64/shader_GLPROGRAM_FACIALREFINE_NORMAL_WARP_Define_USE_EG_PRESERV_DEF_CATMULL_ROM.bin
 odm/etc/camera/resources/render/glsl/binShaders64/shader_GLPROGRAM_FACIALREFINE_V2_BASE_FUSE_OFFSET.bin
+odm/etc/camera/resources/render/glsl/binShaders64/shader_GLPROGRAM_FACIALREFINE_V2_BASE_FUSE_OFFSET_Define_NEED_REFINE.bin
 odm/etc/camera/resources/render/glsl/binShaders64/shader_GLPROGRAM_FACIALREFINE_V2_BASE_FUSE_OFFSET_Define_USE_SPLIT.bin
+odm/etc/camera/resources/render/glsl/binShaders64/shader_GLPROGRAM_FACIALREFINE_V2_BASE_FUSE_OFFSET_Define_USE_SPLIT_NEED_REFINE.bin
 odm/etc/camera/resources/render/glsl/binShaders64/shader_GLPROGRAM_FACIALREFINE_V2_EYE_FUSE_OFFSET.bin
+odm/etc/camera/resources/render/glsl/binShaders64/shader_GLPROGRAM_FACIALREFINE_V2_EYE_FUSE_OFFSET_Define_NEED_REFINE.bin
 odm/etc/camera/resources/render/glsl/binShaders64/shader_GLPROGRAM_FACIALREFINE_V2_WARP.bin
 odm/etc/camera/resources/render/glsl/binShaders64/shader_GLPROGRAM_FACIALREFINE_V2_WARP_Define_DEF_CATMULL_ROM.bin
 odm/etc/camera/resources/render/glsl/binShaders64/shader_GLPROGRAM_FACIALREFINE_V2_WARP_Define_DEF_M.bin
@@ -1056,6 +1064,7 @@ odm/lib64/libceres.so
 odm/lib64/libchifeature2.so
 odm/lib64/libchilog.so
 odm/lib64/libcom.qti.chinodeutils.so
+odm/lib64/libcom.xiaomi.algomsg.so
 odm/lib64/libcom.xiaomi.attribute.so
 odm/lib64/libcom.xiaomi.debug.so
 odm/lib64/libcom.xiaomi.eventcallback.so
@@ -1185,6 +1194,7 @@ vendor/lib64/hw/android.hardware.camera.provider@2.7-impl-vcamera.so
 vendor/lib64/hw/vendor.xiaomi.hardware.quickcamera@1.0-impl.so
 vendor/lib64/libPlatformValidatorShared.so
 vendor/lib64/libSNPE.so
+vendor/lib64/libSNPESample.so
 vendor/lib64/libSnpeDspV65Stub.so
 vendor/lib64/libSnpeDspV66Stub.so
 vendor/lib64/libSnpeHta.so
@@ -1199,6 +1209,7 @@ vendor/lib64/libcalculator_htp.so
 vendor/lib64/libcamxexternalformatutils.so
 vendor/lib64/libhta_hexagon_runtime_snpe.so
 vendor/lib64/libmemunreachable.so
+vendor/lib64/libmiam.so
 vendor/lib64/libmicuttlefish_fs.so
 vendor/lib64/libmivsock_utils.so
 vendor/lib64/libos.so
@@ -1483,6 +1494,7 @@ odm/lib64/libfpsmonitor.so
 odm/lib64/libhdrmode.so
 odm/lib64/libhistprocess.so
 odm/lib64/libmiBrightness.so
+odm/lib64/libmiClstc.so
 odm/lib64/libmiSensorCtrl.so
 odm/lib64/libmiXmlParser.so
 odm/lib64/libmi_dspp.so
@@ -1501,6 +1513,7 @@ vendor/lib64/libdisplayfeature.so
 vendor/lib64/libdisplayfeatureservice.so
 vendor/lib64/libeyecare.so
 vendor/lib64/libmi-stc-HW-modulate.so
+vendor/lib64/libmilut.so
 vendor/lib64/libwfddisplayconfig_vendor.so
 vendor/lib64/vendor.xiaomi.hardware.displayfeature@1.0.so
 
@@ -1515,7 +1528,6 @@ vendor/lib64/libhdr_hbm.so
 vendor/lib64/libhdrdynamic.so
 vendor/lib64/libhdrdynamicootf.so
 vendor/lib64/libhdrvivid.so
-vendor/lib64/libpichdralgo.so
 
 # Display HWC
 vendor/bin/hw/vendor.qti.hardware.display.composer-service
@@ -1564,6 +1576,9 @@ vendor/etc/display/DPU7__.xml
 vendor/etc/display/DPU820.xml
 vendor/etc/display/DPU8__.xml
 vendor/etc/display/DPU9__.xml
+vendor/etc/display/LUT0.txt
+vendor/etc/display/LUT1.txt
+vendor/etc/display/LUT2.txt
 vendor/etc/display/advanced_sf_offsets.xml
 vendor/etc/display/thermallevel_to_fps.xml
 vendor/etc/clstc_config_library.xml
@@ -1812,7 +1827,11 @@ odm/firmware/a740_zap.elf
 odm/firmware/a740_zap.mbn
 odm/firmware/a740_zap.mdt
 vendor/firmware/a740_sqe.fw
+vendor/firmware/a740_zap.b00
+vendor/firmware/a740_zap.b01
+vendor/firmware/a740_zap.b02
 vendor/firmware/a740_zap.elf
+vendor/firmware/a740_zap.mdt
 vendor/firmware/gmu_gen70200.bin
 
 # Identity service
@@ -1875,21 +1894,24 @@ vendor/lib64/vendor.qti.hardware.ListenSoundModel@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.ListenSoundModel@1.0.so
 
 # Media
+odm/etc/media_profiles_kalama.xml:vendor/etc/media_profiles_kalama.xml
+odm/etc/media_profiles_kalama.xml
 vendor/bin/init.qti.media.sh
 vendor/bin/hw/vendor.qti.media.c2@1.0-service
 vendor/bin/hw/vendor.qti.media.c2audio@1.0-service
+vendor/etc/init/init.qti.media.rc
 vendor/etc/init/vendor.qti.media.c2@1.0-service.rc
 vendor/etc/init/vendor.qti.media.c2audio@1.0-service.rc
 vendor/etc/media_codecs.xml
 vendor/etc/media_codecs_c2_audio.xml
 vendor/etc/media_codecs_kalama.xml
 vendor/etc/media_codecs_kalama_vendor.xml
+vendor/etc/media_codecs_kalama_vendor_without_dvenc.xml
 vendor/etc/media_codecs_performance_kalama.xml
 vendor/etc/media_codecs_performance_kalama_vendor.xml
 vendor/etc/media_kalama/video_system_specs.json
 vendor/etc/media_profiles.xml
 vendor/etc/media_profiles_V1_0.xml
-vendor/etc/media_profiles_kalama.xml
 vendor/etc/seccomp_policy/c2audio.vendor.base-arm.policy
 vendor/etc/seccomp_policy/c2audio.vendor.base-arm64.policy
 vendor/etc/seccomp_policy/c2audio.vendor.ext-arm.policy
@@ -1923,6 +1945,7 @@ vendor/lib64/libqcodec2_filterbase.so
 vendor/lib64/libqcodec2_hooks.so
 vendor/lib64/libqcodec2_imgtxrfilter.so
 vendor/lib64/libqcodec2_mockfilter.so
+vendor/lib64/libqcodec2_mocklutfilter.so
 vendor/lib64/libqcodec2_mockqc2filter.so
 vendor/lib64/libqcodec2_platform.so
 vendor/lib64/libqcodec2_salmapfilter.so
@@ -1942,15 +1965,13 @@ vendor/etc/dolby/dax-default.xml
 vendor/etc/init/dolbycodec2.rc
 vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc
 vendor/etc/media_codecs_dolby_audio.xml
-vendor/etc/media_codecs_no_dolbyencoder_vendor.xml
-vendor/lib64/c2.dolby.avc.dec.so
-vendor/lib64/c2.dolby.avc.sec.dec.so
 vendor/lib64/c2.dolby.client.so
-vendor/lib64/c2.dolby.egl.so
 vendor/lib64/c2.dolby.hevc.dec.so
 vendor/lib64/c2.dolby.hevc.enc.so
 vendor/lib64/c2.dolby.hevc.sec.dec.so
 vendor/lib64/c2.dolby.store.so
+vendor/lib64/libDecoderProcessor.so
+vendor/lib64/libEncoderProcessor.so
 vendor/lib64/libcodec2_hidl@1.0.so
 vendor/lib64/libcodec2_hidl@1.1.so
 vendor/lib64/libcodec2_hidl@1.2.so
@@ -1958,8 +1979,8 @@ vendor/lib64/libcodec2_soft_ac4dec.so
 vendor/lib64/libcodec2_soft_ddpdec.so
 vendor/lib64/libcodec2_store_dolby.so
 vendor/lib64/libdeccfg.so
+vendor/lib64/libeglcore.so
 vendor/lib64/libdolbyottcameracontrol.so
-vendor/lib64/libdolbyvision.so
 
 # Memtrack
 vendor/bin/hw/vendor.qti.hardware.memtrack-service
@@ -2067,6 +2088,7 @@ vendor/etc/sn100u_nfcon.pnscr
 vendor/etc/sn100u_pnx_chr.pnscr
 vendor/etc/sn100u_pnx_cui.pnscr
 vendor/etc/sn100u_pnx_ese_3.pnscr
+vendor/etc/sn100u_pnx_ese_3_hce.pnscr
 vendor/etc/sn100u_pnx_ese_aclog.pnscr
 vendor/etc/sn100u_pnx_ese_cplc.pnscr
 vendor/etc/sn100u_pnx_ese_fabkey.pnscr
@@ -2155,7 +2177,6 @@ vendor/lib64/libqapesdk.so|8ea0f7a68dd3954f12b78a603da04eb9047c91df
 vendor/lib64/libqti-iopd-client.so|bcd2eedd3afb36f6a10f35e162a7c283b970185d
 vendor/lib64/libqti-iopd.so|e590812ebcf2a1ee0fe30ff1a81c9f8afe3ff693
 vendor/lib64/libqti-perfd-client.so|9fddfe2bd27e76cbd1f4b6b5fad156acfec374df
-vendor/lib64/libqti-perfd-tests.so|8c41988d7bd7079ce35b76f58e2637ac669f41bc
 vendor/lib64/libqti-perfd.so|19d7b75d3a60b8f57ac04ce607a1ddccce475ac1
 vendor/lib64/libqti-qesdk-secure.so|aa02951df5f3d078d35f5557de78d5e0405a8727
 vendor/lib64/libqti-util.so|f61372d5cf839aea6858dea0a798b15531aad4fa
@@ -2340,7 +2361,7 @@ product/framework/uimgbalibrary.jar
 product/framework/uimgbamanagerlibrary.jar
 product/framework/uimservicelibrary.jar
 system_ext/app/ImsRcsService/ImsRcsService.apk
-system_ext/app/QtiTelephony/QtiTelephony.apk|be3b1e02afb02854972c8493f82f88b0e0cd494c
+system_ext/app/QtiTelephony/QtiTelephony.apk|43a050b46040828c9bf0bdfde636920919ead957
 system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
 system_ext/etc/permissions/qcrilhook.xml
 system_ext/etc/permissions/qti_permissions.xml
@@ -2407,7 +2428,7 @@ system_ext/lib64/vendor.qti.ims.rcsuce@1.2.so
 system_ext/lib64/vendor.qti.ims.rcsuceaidlservice-V1-ndk.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.1.so
-system_ext/priv-app/ims/ims.apk|6e96fc448d1d90ba5120c3674761d97dab369a74
+system_ext/priv-app/ims/ims.apk|8e491ce9035bf9e471ec535ffa5557a1626995cd
 system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 vendor/app/IWlanService/IWlanService.apk
 vendor/bin/ATFWD-daemon
@@ -2449,6 +2470,7 @@ vendor/etc/qcril_database/upgrade/config/10.0_config.sql
 vendor/etc/qcril_database/upgrade/config/11.0_config.sql
 vendor/etc/qcril_database/upgrade/config/12.0_config.sql
 vendor/etc/qcril_database/upgrade/config/13.0_config.sql
+vendor/etc/qcril_database/upgrade/config/14.0_config.sql
 vendor/etc/qcril_database/upgrade/config/6.0_config.sql
 vendor/etc/qcril_database/upgrade/config/7.0_config.sql
 vendor/etc/qcril_database/upgrade/config/8.0_config.sql
