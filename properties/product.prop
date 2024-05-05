@@ -39,11 +39,6 @@ bluetooth.profile.pan.panu.enabled=true
 bluetooth.profile.pbap.server.enabled=true
 bluetooth.profile.sap.server.enabled=false
 
-# Camera
-ro.product.mod_device=fuxi_global
-ro.hardware.camera=xiaomi
-ro.com.google.lens.oem_camera_package=com.android.camera
-
 # Radio
 ro.vendor.radio.5g=3
 ro.vendor.radio.features_common=3

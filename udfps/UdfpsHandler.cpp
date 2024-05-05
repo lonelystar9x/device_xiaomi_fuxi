@@ -23,7 +23,7 @@
 
 #define COMMAND_FOD_PRESS_STATUS 1
 #define PARAM_FOD_PRESSED 1
-#define PARAM_FOD_RELEASED 1
+#define PARAM_FOD_RELEASED 0
 
 #define FOD_STATUS_OFF 0
 #define FOD_STATUS_ON 1
@@ -72,7 +72,7 @@ static bool readBool(int fd) {
 
 class XiaomiSm8550UdfpsHander : public UdfpsHandler {
   public:
-    void init(xiaomi_fingerprint_device_t* device) {
+    void init(fingerprint_device_t* device) {
         mDevice = device;
         touch_fd_ = android::base::unique_fd(open(TOUCH_DEV_PATH, O_RDWR));
 
@@ -133,7 +133,7 @@ class XiaomiSm8550UdfpsHander : public UdfpsHandler {
     }
 
   private:
-    xiaomi_fingerprint_device_t* mDevice;
+    fingerprint_device_t* mDevice;
     android::base::unique_fd touch_fd_;
 
     void setFodStatus(int value) {

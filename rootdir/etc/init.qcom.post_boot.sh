@@ -662,27 +662,27 @@ function disable_core_ctl() {
     fi
 }
 
-# function enable_swap() {
-#     MemTotalStr=`cat /proc/meminfo | grep MemTotal`
-#     MemTotal=${MemTotalStr:16:8}
+function enable_swap() {
+    MemTotalStr=`cat /proc/meminfo | grep MemTotal`
+    MemTotal=${MemTotalStr:16:8}
 
-#     SWAP_ENABLE_THRESHOLD=1048576
-#     swap_enable=`getprop ro.vendor.qti.config.swap`
+    SWAP_ENABLE_THRESHOLD=1048576
+    swap_enable=`getprop ro.vendor.qti.config.swap`
 
-#     # Enable swap initially only for 1 GB targets
-#     if [ "$MemTotal" -le "$SWAP_ENABLE_THRESHOLD" ] && [ "$swap_enable" == "true" ]; then
-#         # Static swiftness
-#         echo 1 > /proc/sys/vm/swap_ratio_enable
-#         echo 70 > /proc/sys/vm/swap_ratio
+    # Enable swap initially only for 1 GB targets
+    if [ "$MemTotal" -le "$SWAP_ENABLE_THRESHOLD" ] && [ "$swap_enable" == "true" ]; then
+        # Static swiftness
+        echo 1 > /proc/sys/vm/swap_ratio_enable
+        echo 70 > /proc/sys/vm/swap_ratio
 
-#         # Swap disk - 200MB size
-#         if [ ! -f /data/vendor/swap/swapfile ]; then
-#             dd if=/dev/zero of=/data/vendor/swap/swapfile bs=1m count=200
-#         fi
-#         mkswap /data/vendor/swap/swapfile
-#         swapon /data/vendor/swap/swapfile -p 32758
-#     fi
-# }
+        # Swap disk - 200MB size
+        if [ ! -f /data/vendor/swap/swapfile ]; then
+            dd if=/dev/zero of=/data/vendor/swap/swapfile bs=1m count=200
+        fi
+        mkswap /data/vendor/swap/swapfile
+        swapon /data/vendor/swap/swapfile -p 32758
+    fi
+}
 
 function configure_memory_parameters() {
     # Set Memory parameters.
@@ -855,6 +855,34 @@ function start_hbtp()
                 start vendor.hbtp
         fi
 }
+
+case "$target" in
+        "kalama")
+                if [ -f /sys/devices/soc0/chip_family ]; then
+                        chip_family_id=`cat /sys/devices/soc0/chip_family`
+                else
+                        chip_family_id=-1
+                fi
+
+                echo "adsprpc : chip_family_id : $chip_faily_id" > /dev/kmsg
+
+                case "$chip_family_id" in
+                    "0x7f")
+                    if [ -f /sys/devices/platform/soc/soc:qcom,msm_fastrpc/fastrpc_cdsp_status ]; then
+                        fastrpc_cdsp_status=`cat /sys/devices/platform/soc/soc:qcom,msm_fastrpc/fastrpc_cdsp_status`
+                    else
+                        fastrpc_cdsp_status=-1
+                    fi
+
+                    echo "adsprpc : fastrpc_cdsp_status : $fastrpc_cdsp_status" > /dev/kmsg
+
+                    if [ $fastrpc_cdsp_status -eq 0 ]; then
+                            setprop vendor.fastrpc.disable.cdsprpcd.daemon 1
+                            echo "adsprpc : Disabled cdsp daemon" > /dev/kmsg
+                    fi
+                esac
+                 ;;
+esac
 
 case "$target" in
     "msm7201a_ffa" | "msm7201a_surf" | "msm7627_ffa" | "msm7627_6x" | "msm7627a"  | "msm7627_surf" | \
