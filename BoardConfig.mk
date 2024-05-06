@@ -262,3 +262,6 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # PowerShare
 $(call soong_config_set, XIAOMI_POWERSHARE, WIRELESS_TX_ENABLE_PATH, /sys/class/qcom-battery/reverse_chg_mode)
+
+# Inherit from the proprietary version
+include vendor/xiaomi/fuxi/BoardConfigVendor.mk
