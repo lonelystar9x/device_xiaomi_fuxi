@@ -12,4 +12,7 @@
 
     <!-- Doze: does the pickup sensor need a proximity check? -->
     <bool name="doze_pickup_event_proximity_check">true</bool>
+
+    <!-- Doze: does this device support STATE_DOZE?  -->
+    <bool name="doze_display_state_supported">true</bool>
 </resources>
