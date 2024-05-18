@@ -1,0 +1,6 @@
+[
+  {
+    "repository": "packages_apps_Prebuilts",
+    "target_path": "packages/apps/Prebuilts"
+  }
+]
