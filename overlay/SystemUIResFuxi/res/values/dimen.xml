@@ -14,4 +14,10 @@
 
     <!-- Location on the screen of the center of the physical power button. -->
     <dimen name="physical_power_button_center_screen_location_y">1040px</dimen>
+
+    <!-- Additional gesture navbar lengths -->
+        <!-- Additional gesture navbar lengths -->
+    <dimen name="navigation_home_handle_width_short">80dp</dimen>
+    <dimen name="navigation_home_handle_width">140dp</dimen>
+    <dimen name="navigation_home_handle_width_long">200dp</dimen>
 </resources>
