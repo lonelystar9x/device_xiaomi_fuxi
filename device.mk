@@ -68,9 +68,20 @@ PRODUCT_PACKAGES += \
     libagm_pcm_plugin
 
 PRODUCT_PACKAGES += \
+    audio.primary.kalama \
     audio.bluetooth.default \
     audio.r_submix.default \
     audio.usb.default
+
+PRODUCT_PACKAGES += \
+    audioadsprpcd \
+    libbatterylistener \
+    libqcompostprocbundle \
+    libqcomvisualizer \
+    libqcomvoiceprocessing \
+    libsndcardparser \
+    libtinycompress \
+    libvolumelistener
 
 # Audio
 PRODUCT_COPY_FILES += \
