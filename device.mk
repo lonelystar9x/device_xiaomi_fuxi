@@ -170,6 +170,10 @@ PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey \
     libdrm.vendor
 
+# Dolby
+PRODUCT_PACKAGES += \
+    XiaomiDolby
+
 # Fastbootd
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl-mock \
