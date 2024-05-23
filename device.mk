@@ -22,6 +22,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_ven
 # Inherit from the proprietary version
 $(call inherit-product, vendor/xiaomi/fuxi/fuxi-vendor.mk)
 
+# Prebuilt Apps
+$(call inherit-product, packages/apps/Prebuilts/config.mk)
+
 # SHIPPING API
 BOARD_API_LEVEL := 33
 BOARD_SHIPPING_API_LEVEL := 31
@@ -155,10 +158,6 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.3.vendor \
     android.hardware.drm-service.clearkey \
     libdrm.vendor
-
-# Dolby
-PRODUCT_PACKAGES += \
-    XiaomiDolby
 
 # Fastbootd
 PRODUCT_PACKAGES += \
