@@ -491,6 +491,7 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Telephony
 PRODUCT_PACKAGES += \
+    XiaomiEuicc \
     extphonelib \
     extphonelib-product \
     extphonelib.xml \
