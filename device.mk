@@ -25,6 +25,9 @@ $(call inherit-product, vendor/xiaomi/fuxi/fuxi-vendor.mk)
 # Prebuilt Apps
 $(call inherit-product, packages/apps/Prebuilts/config.mk)
 
+# Signature Keys
+-include vendor/lineage-priv/keys/keys.mk
+
 # SHIPPING API
 BOARD_API_LEVEL := 33
 BOARD_SHIPPING_API_LEVEL := 31
