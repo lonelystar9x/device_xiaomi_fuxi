@@ -19,4 +19,9 @@
     <string name="clear_speaker_title">Làm sạch loa</string>
     <string name="clear_speaker_summary">Phát âm thanh 30 giây để làm sạch loa</string>
     <string name="clear_speaker_description">Chạy tính năng này một hoặc hai lần nếu bạn thấy rằng loa của mình bị bụi bám nhẹ. Đặt âm lượng phương tiện ở mức tối đa.\n\nNếu loa bị chặn nhiều, hãy chạy tính năng này 2-5 lần trong khi lắc thiết bị của bạn với loa hướng xuống dưới.\n\nCẢNH Báo: Đảm bảo rằng mọi tai nghe đã được rút ra.</string>
+     <!-- Thermal Profile -->
+    <string name="thermalprofile_title">Cấu hình hiệu năng</string>
+    <string name="thermalprofile_default">Mặc định</string>
+    <string name="thermalprofile_game">Trò chơi</string>
+    <string name="thermalprofile_unknown">Không rõ</string>
 </resources>
