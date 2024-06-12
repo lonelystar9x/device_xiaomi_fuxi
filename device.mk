@@ -383,6 +383,7 @@ DEVICE_PACKAGE_OVERLAYS += \
 PRODUCT_PACKAGES += \
     CarrierConfigRes \
     CarrierConfigResMiui \
+    DeviceAsWebcamResXiaomi \
     FrameworksResCommon \
     FrameworksResFuxi \
     SettingsResCommon \
