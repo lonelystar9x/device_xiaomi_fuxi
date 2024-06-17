@@ -224,6 +224,7 @@ PRODUCT_PACKAGES += \
     libgralloc.qti \
     libgui_vendor \
     libqdMetaData \
+    libqdutils \
     android.hardware.media.c2@1.2.vendor \
     dolbycodec_shim \
     vendor.display.config@1.1 \
