@@ -70,7 +70,7 @@ static bool readBool(int fd) {
 
 }  // anonymous namespace
 
-class XiaomiSm8550UdfpsHander : public UdfpsHandler {
+class XiaomiSm8550UdfpsHandler : public UdfpsHandler {
   public:
     void init(fingerprint_device_t* device) {
         mDevice = device;
@@ -127,9 +127,19 @@ class XiaomiSm8550UdfpsHander : public UdfpsHandler {
     }
 
     void cancel() {
-        LOG(INFO) << __func__;
-        setFingerDown(false);
-        setFodStatus(FOD_STATUS_OFF);
+        LOG(DEBUG) << __func__;
+    }
+    
+    void preEnroll() {
+        LOG(DEBUG) << __func__;
+    }
+
+    void enroll() {
+        LOG(DEBUG) << __func__;
+    }
+
+    void postEnroll() {
+        LOG(DEBUG) << __func__;
     }
 
   private:
@@ -154,7 +164,7 @@ class XiaomiSm8550UdfpsHander : public UdfpsHandler {
 };
 
 static UdfpsHandler* create() {
-    return new XiaomiSm8550UdfpsHander();
+    return new XiaomiSm8550UdfpsHandler();
 }
 
 static void destroy(UdfpsHandler* handler) {
