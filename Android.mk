@@ -82,39 +82,4 @@ ALL_DEFAULT_INSTALLED_MODULES += \
 	$(EGL_LIB_SYMLINKS) \
 	$(EGL_LIB64_SYMLINKS)
 
-FIRMWARE_WLAN_QCA_CLD_KIWI_SYMLINKS := $(TARGET_OUT_VENDOR)/firmware/wlan/qca_cld/kiwi/
-$(FIRMWARE_WLAN_QCA_CLD_KIWI_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "Creating kiwi qca_cld wlan firmware symlinks: $@"
-	mkdir -p $@
-	$(hide) ln -sf /vendor/etc/wifi/kiwi/WCNSS_qcom_cfg.ini $@/WCNSS_qcom_cfg.ini
-	$(hide) ln -sf /mnt/vendor/persist/kiwi/wlan_mac.bin $@/wlan_mac.bin
-
-FIRMWARE_WLAN_QCA_CLD_KIWI_V2_SYMLINKS := $(TARGET_OUT_VENDOR)/firmware/wlan/qca_cld/kiwi_v2/
-$(FIRMWARE_WLAN_QCA_CLD_KIWI_V2_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "Creating kiwi_v2 qca_cld wlan firmware symlinks: $@"
-	mkdir -p $@
-	$(hide) ln -sf /vendor/etc/wifi/kiwi_v2/WCNSS_qcom_cfg.ini $@/WCNSS_qcom_cfg.ini
-	$(hide) ln -sf /mnt/vendor/persist/kiwi_v2/wlan_mac.bin $@/wlan_mac.bin
-
-FIRMWARE_WLAN_QCA_CLD_QCA6490_SYMLINKS := $(TARGET_OUT_VENDOR)/firmware/wlan/qca_cld/qca6490/
-$(FIRMWARE_WLAN_QCA_CLD_QCA6490_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "Creating qca6490 qca_cld wlan firmware symlinks: $@"
-	mkdir -p $@
-	$(hide) ln -sf /vendor/etc/wifi/qca6490/WCNSS_qcom_cfg.ini $@/WCNSS_qcom_cfg.ini
-	$(hide) ln -sf /mnt/vendor/persist/qca6490/wlan_mac.bin $@/wlan_mac.bin
-
-ALL_DEFAULT_INSTALLED_MODULES += \
-	$(FIRMWARE_WLAN_QCA_CLD_KIWI_SYMLINKS) \
-	$(FIRMWARE_WLAN_QCA_CLD_KIWI_V2_SYMLINKS) \
-	$(FIRMWARE_WLAN_QCA_CLD_QCA6490_SYMLINKS)
-
-FIRMWARE_SYMLINKS := $(TARGET_OUT_VENDOR)/firmware/
-$(FIRMWARE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "Creating wlanmdsp.otaupdate firmware symlinks: $@"
-	mkdir -p $@
-	$(hide) ln -sf /data/vendor/firmware/wlanmdsp.mbn $@/wlanmdsp.otaupdate
-
-ALL_DEFAULT_INSTALLED_MODULES += \
-	$(FIRMWARE_SYMLINKS)
-
 endif
