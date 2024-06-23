@@ -23,7 +23,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_ven
 $(call inherit-product, vendor/xiaomi/fuxi/fuxi-vendor.mk)
 
 # Prebuilt Apps
-$(call inherit-product, packages/apps/Prebuilts/config.mk)
+ifeq ($(INCLUDE_PREBUILTS), true)
+    $(call inherit-product, packages/apps/Prebuilts/config.mk)
+endif
 
 # Signature Keys
 -include vendor/lineage-priv/keys/keys.mk
