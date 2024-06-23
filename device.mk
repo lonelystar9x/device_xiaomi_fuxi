@@ -30,6 +30,9 @@ endif
 # Signature Keys
 -include vendor/lineage-priv/keys/keys.mk
 
+# Add common definitions for Qualcomm
+$(call inherit-product, hardware/qcom-caf/common/common.mk)
+
 # SHIPPING API
 BOARD_SHIPPING_API_LEVEL := 31
 PRODUCT_SHIPPING_API_LEVEL := 31
