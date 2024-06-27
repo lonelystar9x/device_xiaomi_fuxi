@@ -464,7 +464,9 @@ PRODUCT_PACKAGES += \
     init.qcom.sh \
     init.recovery.qcom.rc \
     init.recovery.usb.rc \
+    init.service.fuxi.rc \
     init.target.rc \
+    init.udfps.fuxi.rc \
     ueventd-odm.rc \
     ueventd.qcom.rc
 
