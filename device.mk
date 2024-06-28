@@ -454,6 +454,7 @@ PRODUCT_PACKAGES += \
     fstab.qcom \
     fstab.zram \
     init.class_main.sh \
+    init.kernel.post_boot-kalama.sh \
     init.qcom.class_core.sh \
     init.qcom.early_boot.sh \
     init.qcom.post_boot.sh \
