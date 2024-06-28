@@ -63,6 +63,7 @@
 import /vendor/etc/init/hw/init.batterysecret.rc
 import /vendor/etc/init/hw/init.mi_thermald.rc
 import /vendor/etc/init/hw/init.qti.kernel.rc
+import /vendor/etc/init/hw/init.perf.fuxi.rc
 import /vendor/etc/init/hw/init.service.fuxi.rc
 import /vendor/etc/init/hw/init.udfps.fuxi.rc
 import /vendor/etc/init/init.charge_logger.rc
@@ -547,17 +548,6 @@ on property:ro.boot.ramdump=enable
 #for cts-on-gsi test
 on boot && property:ro.product.system.manufacturer=Android
     setprop debug.sf.set_idle_timer_ms 0
-
-on property:vendor.post_boot.parsed=1
-    # IRQ Tuning
-    # IRQ 253: msm_drm0
-    # IRQ 208: kgsl_3d0_irq
-    write /proc/irq/208/smp_affinity_list 1
-    write /proc/irq/253/smp_affinity_list 2
-
-    # Kill WALT CPU input boost
-    write /proc/sys/walt/input_boost/input_boost_freq "0 0 0 0 0 0 0"
-    write /proc/sys/walt/input_boost/input_boost_ms 0
 
 on property:vendor.minetd.low_budget=0
     write /proc/sys/net/core/netdev_budget_usecs "8000"
