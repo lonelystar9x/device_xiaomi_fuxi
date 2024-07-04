@@ -24,7 +24,7 @@ $(call inherit-product, vendor/xiaomi/fuxi/fuxi-vendor.mk)
 
 # Prebuilt Apps
 ifeq ($(INCLUDE_PREBUILTS), true)
-    $(call inherit-product, packages/apps/Prebuilts/config.mk)
+    $(call inherit-product-if-exists, packages/apps/Prebuilts/config.mk)
 endif
 
 # Signature Keys
