@@ -31,7 +31,6 @@ endif
 -include vendor/lineage-priv/keys/keys.mk
 
 # SHIPPING API
-BOARD_API_LEVEL := 33
 BOARD_SHIPPING_API_LEVEL := 31
 PRODUCT_SHIPPING_API_LEVEL := 31
 
