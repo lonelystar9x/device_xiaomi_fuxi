@@ -31,6 +31,10 @@ on post-fs && property:ro.boot.hwc=CN
     mount none /dev/null /product/priv-app/EuiccGoogle/EuiccGoogle.apk bind
     mount none /dev/null /product/app/XiaomiEuicc/XiaomiEuicc.apk bind
 
+    # Remove Openeuicc on CN Variant
+    mount none /dev/null /system_ext/etc/permissions/privapp_whitelist_im.angry.openeuicc.xml bind
+    mount none /dev/null /system_ext/priv-app/OpenEUICC/OpenEUICC.apk bind
+
 # Connection Security
 service ssgqmigd /vendor/bin/ssgqmigd64
     override
