@@ -43,24 +43,4 @@ ALL_DEFAULT_INSTALLED_MODULES += \
 	$(VM_SYSTEM_MOUNT_POINT) \
 	$(MODEM_FIRMWARE_MOUNT_POINT)
 
-CAMERA_LIB_SYMLINKS := $(TARGET_OUT_VENDOR)/lib64/camera
-$(CAMERA_LIB_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "Creating camera lib64 symlink: $@"
-	@mkdir -p $@
-	$(hide) ln -sf /odm/lib64/camera/aon_front.pb $@/aon_front.pb
-
-ALL_DEFAULT_INSTALLED_MODULES += \
-	$(CAMERA_LIB_SYMLINKS)
-
-CNE_LIBS := libvndfwk_detect_jni.qti_vendor.so
-CNE_SYMLINKS := $(addprefix $(TARGET_OUT_VENDOR_APPS)/CneApp/lib/arm64/,$(notdir $(CNE_LIBS)))
-$(CNE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "CNE lib link: $@"
-	@mkdir -p $(dir $@)
-	@rm -rf $@
-	$(hide) ln -sf /vendor/lib64/$(notdir $@) $@
-
-ALL_DEFAULT_INSTALLED_MODULES += \
-	$(CNE_SYMLINKS)
-
 endif
