@@ -22,11 +22,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_ven
 # Inherit from the proprietary version
 $(call inherit-product, vendor/xiaomi/fuxi/fuxi-vendor.mk)
 
-# Prebuilt Apps
-ifeq ($(INCLUDE_PREBUILTS), true)
-    $(call inherit-product-if-exists, packages/apps/Prebuilts/config.mk)
-endif
-
 # Signature Keys
 -include vendor/lineage-priv/keys/keys.mk
 
@@ -637,4 +632,29 @@ PRODUCT_BOOT_JARS += \
 
 # PowerShare
 PRODUCT_PACKAGES += \
-    vendor.lineage.powershare@1.0-service.xiaomi    
+    vendor.lineage.powershare@1.0-service.xiaomi
+
+# QPGallery
+PRODUCT_PACKAGES += \
+     SPGallery
+
+# XperiaKeyboard
+PRODUCT_PACKAGES += \
+     XperiaKeyboard
+
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/XperiaKeyboard/lib/arm64,$(TARGET_COPY_OUT_PRODUCT)/app/XperiaKeyboard/lib/arm64)
+
+# Remove unwanted packages
+PRODUCT_PACKAGES += \
+    RemovePackages
+
+# Quick Tap
+ifeq ($(TARGET_SUPPORTS_QUICK_TAP),true)
+PRODUCT_PRODUCT_PROPERTIES += \
+    persist.columbus.use_ap_sensor=true
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/quick_tap.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/quick_tap.xml
+else
+PRODUCT_PRODUCT_PROPERTIES += \
+    persist.columbus.use_ap_sensor=false
+endif

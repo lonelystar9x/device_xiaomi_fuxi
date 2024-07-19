@@ -9,6 +9,11 @@ KERNEL_PATH := $(DEVICE_PATH)-kernel
 
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+BUILD_BROKEN_DUP_RULES := true
+
+# Camera
+TARGET_INCLUDES_MIUI_CAMERA := true
+TARGET_USES_MIUI_CAMERA := true
 
 # A/B
 AB_OTA_UPDATER := true
@@ -48,9 +53,6 @@ TARGET_SCREEN_DENSITY := 440
 
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/configs/config.fs
-
-# Firmware
--include vendor/xiaomi/fuxi-firmware/BoardConfigVendor.mk
 
 # Kernel
 BOARD_KERNEL_PAGESIZE   := 4096
