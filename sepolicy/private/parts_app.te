@@ -13,12 +13,24 @@ binder_call(parts_app, vendor_hal_displayfeature_xiaomi)
 
 allow parts_app {
   activity_service
+  activity_task_service
+  audio_service
+  audioserver_service
+  autofill_service
   content_capture_service
   game_service
+  gpu_service
+  hint_service
   netstats_service
+  mediaserver_service
   trust_service
   sensorservice_service
+  surfaceflinger_service
+  thermal_service
   vendor_perf_service
+  virtual_device_native_service
+  virtual_device_service
+  voiceinteraction_service
 }:service_manager find;
 
 allow parts_app {
