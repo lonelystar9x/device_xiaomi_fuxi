@@ -297,6 +297,7 @@ PRODUCT_PACKAGES += \
 
 # Logging
 SPAMMY_LOG_TAGS := \
+    ColorManager \
     MiStcImpl \
     SDM \
     SDM-histogram \
