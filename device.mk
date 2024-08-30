@@ -373,15 +373,13 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.nxp.mifare.xml
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-lineage
-
 PRODUCT_PACKAGES += \
     CarrierConfigRes \
     CarrierConfigResMiui \
     DeviceAsWebcamResXiaomi \
     FrameworksResCommon \
     FrameworksResFuxi \
+    LineageSDKOverlayXiaomi \
     NfcResFuxi \
     SettingsResCommon \
     SettingsOverlayChina \
