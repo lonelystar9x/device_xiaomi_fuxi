@@ -513,12 +513,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/euicc/privapp-permissions-euiccgoogle.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-euiccgoogle.xml
-else
-PRODUCT_PACKAGES += \
-    OpenEUICC
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/euicc/privapp_whitelist_im.angry.openeuicc.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp_whitelist_im.angry.openeuicc.xml
 endif
 
 PRODUCT_PACKAGES += \
