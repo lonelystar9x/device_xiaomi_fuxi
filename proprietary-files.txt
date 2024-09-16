@@ -215,7 +215,7 @@ vendor/lib64/libhfp_pal.so
 vendor/lib64/libkaraokepal.so
 vendor/lib64/liblx-ar_util.so
 vendor/lib64/liblx-osal.so
-vendor/lib64/libfcsam.so
+vendor/lib64/libfcsam.so;FIX_SONAME
 vendor/lib64/libmcs.so
 vendor/lib64/libmisfpsop.so
 vendor/lib64/libmisight.so
@@ -1190,9 +1190,9 @@ vendor/lib64/hw/vendor.xiaomi.hardware.quickcamera@1.0-impl.so
 vendor/lib64/libPlatformValidatorShared.so
 vendor/lib64/libSNPE.so
 vendor/lib64/libSNPESample.so
-vendor/lib64/libSnpeDspV65Stub.so
-vendor/lib64/libSnpeDspV66Stub.so
-vendor/lib64/libSnpeHta.so
+vendor/lib64/libSnpeDspV65Stub.so;FIX_SONAME
+vendor/lib64/libSnpeDspV66Stub.so;FIX_SONAME
+vendor/lib64/libSnpeHta.so;FIX_SONAME
 vendor/lib64/libSnpeHtpPrepare.so
 vendor/lib64/libSnpeHtpV68Stub.so
 vendor/lib64/libSnpeHtpV69Stub.so
@@ -1204,7 +1204,7 @@ vendor/lib64/libcalculator_htp.so
 vendor/lib64/libcamxexternalformatutils.so
 vendor/lib64/libhta_hexagon_runtime_snpe.so
 vendor/lib64/libmemunreachable.so
-vendor/lib64/libmiam.so
+vendor/lib64/libmiam.so;FIX_SONAME
 vendor/lib64/libmicuttlefish_fs.so
 vendor/lib64/libmivsock_utils.so
 vendor/lib64/libos.so
@@ -1687,7 +1687,7 @@ vendor/lib64/vendor.qti.esepowermanager@1.1.so
 product/priv-app/EuiccGoogle/EuiccGoogle.apk|29f8c2d4301cc1c0c023dd1c205cfdec5bfc73aa;PRESIGNED
 
 # Fingerprint
-odm/lib64/hw/fingerprint.goodix_fod.so:vendor/lib64/hw/fingerprint.goodix_fod.default.so
+odm/lib64/hw/fingerprint.goodix_fod.so:vendor/lib64/hw/fingerprint.goodix_fod.default.so;FIX_SONAME
 odm/lib64/libgf_hal.so
 odm/lib64/vendor.xiaomi.hardware.fx.tunnel@1.0.so
 vendor/bin/hw/vendor.xiaomi.hardware.dtool@1.0-service
@@ -2092,8 +2092,8 @@ vendor/etc/sn100u_pnx_ese_sn.pnscr
 vendor/etc/sn100u_pnx_ndi.pnscr
 vendor/etc/sn100u_pnx_pcv.pnscr
 vendor/etc/sn100u_pnx_sst.pnscr
-vendor/lib64/libsn100u_fw.so
-vendor/lib64/libsn220u_fw.so
+vendor/lib64/libsn100u_fw.so;FIX_SONAME
+vendor/lib64/libsn220u_fw.so;FIX_SONAME
 vendor/lib64/libvui_dmgr.so
 vendor/lib64/libvui_dmgr_client.so
 vendor/lib64/nfc_nci.st21nfc.st.so
@@ -2468,7 +2468,7 @@ vendor/lib64/libqcrildatactl.so
 vendor/lib64/libqcrildataqos.so
 vendor/lib64/libqdpr.so
 vendor/lib64/libqms_client.so
-vendor/lib64/libqms_xiaomi.so
+vendor/lib64/libqms_xiaomi.so;FIX_SONAME
 vendor/lib64/libqrtr.so
 vendor/lib64/libqrtrclient.so
 vendor/lib64/libqsocket.so
