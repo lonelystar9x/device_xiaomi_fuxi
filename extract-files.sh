@@ -89,6 +89,9 @@ function blob_fixup() {
         vendor/etc/seccomp_policy/qwesd@2.0.policy)
             echo "pipe2: 1" >> "${2}"
             ;;
+        vendor/etc/seccomp_policy/atfwd@2.0.policy)
+            grep -q "gettid: 1" "${2}" || echo "gettid: 1" >> "${2}"
+            ;;
         vendor/lib64/c2.dolby.client.so)
             "${PATCHELF}" --add-needed "libcodec2_hidl_shim.so" "${2}"
             ;;
