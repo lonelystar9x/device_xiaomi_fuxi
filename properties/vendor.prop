@@ -155,10 +155,11 @@ persist.vendor.dpm.vndr.feature=11
 drm.service.enabled=true
 
 # Fingerprint
+persist.vendor.fingerprint.type=udfps_optical
+persist.vendor.fingerprint.sensor_location=540|2150|105
+persist.vendor.fingerprint.sensor_modules=goodix_fod
 persist.vendor.sys.fp.dump_data=0
 persist.vendor.sys.fp.expolevel=0x88
-persist.vendor.sys.fp.fod.location.X_Y=442,2052
-persist.vendor.sys.fp.fod.size.width_height=196,196
 ro.hardware.fp.fod.location=low
 ro.hardware.fp.fod.lowlight.brightness.threshold=411
 ro.hardware.fp.fod.lowlight.lux.threshold=3
