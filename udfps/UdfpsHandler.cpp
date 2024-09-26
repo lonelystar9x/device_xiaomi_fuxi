@@ -133,11 +133,9 @@ class XiaomiSm8550UdfpsHandler : public UdfpsHandler {
     void preEnroll() {
         LOG(DEBUG) << __func__;
     }
-
     void enroll() {
         LOG(DEBUG) << __func__;
     }
-
     void postEnroll() {
         LOG(DEBUG) << __func__;
     }
