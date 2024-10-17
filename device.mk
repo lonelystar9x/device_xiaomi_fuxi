@@ -58,6 +58,7 @@ PRODUCT_PACKAGES += \
     android.hardware.audio@7.1-impl \
     android.hardware.audio.effect@7.0-impl \
     android.hardware.audio.service \
+    android.hardware.soundtrigger@2.2-impl \
     android.hardware.soundtrigger@2.3-impl \
     libagm_compress_plugin \
     libagm_mixer_plugin \
@@ -77,6 +78,10 @@ PRODUCT_PACKAGES += \
     libqcomvoiceprocessing \
     libsndcardparser \
     libtinycompress \
+    libagmclient \
+    libfmpal \
+    libhfp_pal \
+    libaudiochargerlistener \
     libvolumelistener
 
 AUDIO_HAL_DIR := hardware/qcom-caf/sm8550/audio/primary-hal
@@ -341,6 +346,8 @@ PRODUCT_COPY_FILES += \
 
 # Misc
 PRODUCT_PACKAGES += \
+    libaudioroute.vendor \
+    libeffectsconfig.vendor \
     libcurl.vendor \
     liblz4.vendor \
     libjsoncpp.vendor \
