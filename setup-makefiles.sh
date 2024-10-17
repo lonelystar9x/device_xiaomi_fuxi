@@ -1,3 +1,4 @@
+
 #!/bin/bash
 #
 # SPDX-FileCopyrightText: 2016 The CyanogenMod Project
@@ -47,6 +48,7 @@ function lib_to_package_fixup_vendor_variants() {
         vendor.qti.diaghal@1.0)
             echo "$1-vendor"
             ;;
+        audio.primary.kalama | \
         libagmclient | \
         libpalclient | \
         libwpa_client) ;;
@@ -62,6 +64,7 @@ function lib_to_package_fixup_odm_variants() {
     fi
 
     case "$1" in
+        audio.primary.kalama | \
         libagmmixer) ;;
         *)
             return 1
