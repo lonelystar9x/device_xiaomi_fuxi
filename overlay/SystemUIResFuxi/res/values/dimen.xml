@@ -26,4 +26,8 @@
     <dimen name="navigation_home_handle_width_short">80dp</dimen>
     <dimen name="navigation_home_handle_width">140dp</dimen>
     <dimen name="navigation_home_handle_width_long">200dp</dimen>
+
+    <!-- Microns/ums (1000 um = 1mm) per pixel for the given device. If unspecified, UI that
+        relies on this value will not be sized correctly. -->
+    <item name="pixel_pitch" format="float" type="dimen">61.3</item>
 </resources>
