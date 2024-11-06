@@ -463,20 +463,14 @@ PRODUCT_PACKAGES += \
 # Rootdir
 PRODUCT_PACKAGES += \
     fstab.qcom \
-    init.class_main.sh \
     init.kernel.post_boot-kalama.sh \
-    init.qcom.class_core.sh \
-    init.qcom.early_boot.sh \
     init.qcom.post_boot.sh \
     init.qcom.rc \
-    init.qcom.sh \
     init.recovery.qcom.rc \
-    init.recovery.usb.rc \
     init.perf.fuxi.rc \
     init.service.fuxi.rc \
     init.target.rc \
     init.udfps.fuxi.rc \
-    ueventd-odm.rc \
     ueventd.qcom.rc
 
 # Secure element
