@@ -8,6 +8,9 @@ persist.audio.fluence.voicerec=false
 ro.qc.sdk.audio.fluencetype=none
 ro.qc.sdk.audio.ssr=false
 
+# Bluetooth
+bluetooth.device.default_name=Xiaomi 13
+
 # displayfeature
 ro.vendor.touchfeature.type=247
 
@@ -18,14 +21,11 @@ ro.vendor.nfc.dispatch_optim=1
 ro.vendor.se.chip.model=SN110T
 ro.vendor.se.type=HCE,UICC
 
-# Qti
-ro.vendor.qti.va_odm.support=1
-
-# Bluetooth
-bluetooth.device.default_name=Xiaomi 13
-
 # Marketname
 ro.product.marketname=Xiaomi 13
+
+# Qti
+ro.vendor.qti.va_odm.support=1
 
 # USB
 vendor.usb.product_string=Xiaomi 13
