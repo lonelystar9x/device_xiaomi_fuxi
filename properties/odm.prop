@@ -21,9 +21,6 @@ ro.vendor.nfc.dispatch_optim=1
 ro.vendor.se.chip.model=SN110T
 ro.vendor.se.type=HCE,UICC
 
-# Marketname
-ro.product.marketname=Xiaomi 13
-
 # Qti
 ro.vendor.qti.va_odm.support=1
 
