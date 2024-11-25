@@ -93,9 +93,6 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --add-needed "libstagefright_foundation-v33.so" "${2}"
             ;;
-        vendor/lib/c2.dolby.client.so | vendor/lib64/c2.dolby.client.so)
-            grep -q "dolbycodec_shim.so" "${2}" || "${PATCHELF}" --add-needed "dolbycodec_shim.so" "${2}"
-            ;;
         vendor/etc/seccomp_policy/qwesd@2.0.policy)
             [ "$2" = "" ] && return 0
             echo "pipe2: 1" >> "${2}"

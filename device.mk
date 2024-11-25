@@ -226,7 +226,6 @@ PRODUCT_PACKAGES += \
     libqdMetaData \
     libqdutils \
     android.hardware.media.c2@1.2.vendor \
-    dolbycodec_shim \
     vendor.display.config@1.1 \
     vendor.display.config@1.11.vendor \
     vendor.display.config@2.0 \
