@@ -34,3 +34,13 @@ BUILD_FINGERPRINT := Xiaomi/fuxi_global/fuxi:13/TKQ1.221114.001/V816.0.5.0.UMCMI
 
 # GMS
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+# QPGallery
+PRODUCT_PACKAGES += \
+     SPGallery
+
+# XperiaKeyboard
+PRODUCT_PACKAGES += \
+     XperiaKeyboard
+
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/XperiaKeyboard/lib/arm64,$(TARGET_COPY_OUT_PRODUCT)/app/XperiaKeyboard/lib/arm64)

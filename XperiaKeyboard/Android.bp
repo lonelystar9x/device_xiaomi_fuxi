@@ -1,0 +1,10 @@
+android_app_import {
+	name: "XperiaKeyboard",
+	overrides: ["LatinIME", "LatinImeGoogle"],
+	apk: "XperiaKeyboard.apk",
+	presigned: true,
+	product_specific: true,
+	dex_preopt: {
+		enabled: false,
+	},
+}
