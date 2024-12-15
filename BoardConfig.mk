@@ -221,7 +221,6 @@ VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
 
 # Sensors
 $(call soong_config_set, SENSORS_XIAOMI, USES_SINGLE_TAP_SENSOR, true)
-$(call soong_config_set, SENSORS_XIAOMI, USES_DOUBLE_TAP_SENSOR, true)
 $(call soong_config_set, SENSORS_XIAOMI, USES_UDFPS_SENSOR, true)
 
 # Sepolicy
