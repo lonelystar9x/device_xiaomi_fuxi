@@ -86,8 +86,6 @@ genfscon sysfs /devices/virtual/mi_memory/mi_memory_device/ufshcd0/dump_device_d
 genfscon sysfs /devices/virtual/mi_memory/mi_memory_device/ddr/ddr_vendor u:object_r:ufs_sysfs:s0
 
 # Touchscreen
-genfscon sysfs "/devices/virtual/touch/touch_dev/gesture_double_tap_enabled" u:object_r:sysfs_tp_touchfeature:s0
-genfscon sysfs "/devices/virtual/touch/touch_dev/gesture_double_tap_state" u:object_r:sysfs_tp_touchfeature:s0
 genfscon sysfs "/devices/virtual/touch/touch_dev/gesture_single_tap_enabled" u:object_r:sysfs_tp_touchfeature:s0
 genfscon sysfs "/devices/virtual/touch/touch_dev/gesture_single_tap_state" u:object_r:sysfs_tp_touchfeature:s0
 
