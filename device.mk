@@ -629,4 +629,19 @@ PRODUCT_PACKAGES += \
 
 # PowerShare
 PRODUCT_PACKAGES += \
-    vendor.lineage.powershare@1.0-service.xiaomi    
+    vendor.lineage.powershare@1.0-service.xiaomi
+
+# Remove unwanted packages
+PRODUCT_PACKAGES += \
+    RemovePackages
+
+# Quick Tap
+ifeq ($(TARGET_SUPPORTS_QUICK_TAP),true)
+PRODUCT_PRODUCT_PROPERTIES += \
+    persist.columbus.use_ap_sensor=true
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/permissions/quick_tap.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/quick_tap.xml
+else
+PRODUCT_PRODUCT_PROPERTIES += \
+    persist.columbus.use_ap_sensor=false
+endif
