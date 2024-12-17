@@ -17,7 +17,10 @@ import android.view.Display;
 import android.view.Display.HdrCapabilities;
 
 import com.xiaomi.settings.display.ColorModeService;
+import com.xiaomi.settings.doze.AodBrightnessService;
+import com.xiaomi.settings.touch.AlwaysOnFingerprintService;
 import com.xiaomi.settings.touch.TouchOrientationService;
+import com.xiaomi.settings.touch.TouchPollingRateService;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
 
@@ -38,14 +41,22 @@ public class BootCompletedReceiver extends BroadcastReceiver {
     }
 
     private static void onLockedBootCompleted(Context context) {
+        // AOD
+        context.startServiceAsUser(new Intent(context, AodBrightnessService.class),
+                UserHandle.CURRENT);
+
         // Display
         context.startServiceAsUser(new Intent(context, ColorModeService.class),
                 UserHandle.CURRENT);
 
         // Touchscreen
+        context.startServiceAsUser(new Intent(context, AlwaysOnFingerprintService.class),
+                UserHandle.CURRENT);
         context.startServiceAsUser(new Intent(context, TouchOrientationService.class),
                 UserHandle.CURRENT);
-        
+        context.startServiceAsUser(new Intent(context, TouchPollingRateService.class),
+                UserHandle.CURRENT);
+
         // Override HDR types
         final DisplayManager displayManager = context.getSystemService(DisplayManager.class);
         displayManager.overrideHdrTypes(Display.DEFAULT_DISPLAY, new int[]{
