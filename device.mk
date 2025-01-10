@@ -400,7 +400,7 @@ PRODUCT_PACKAGES += \
     SettingsResCommon \
     SettingsOverlayChina \
     SettingsOverlayGlobal \
-    SettingsProvider \
+    SettingsProviderResfuxi \
     TelephonyResCommon \
     SystemUIResFuxi \
     WifiResCommon \

@@ -109,8 +109,8 @@ BOARD_VENDOR_KERNEL_MODULES := $(addprefix $(KERNEL_PATH)/vendor_dlkm/, $(BOARD_
 BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE :=  $(KERNEL_PATH)/vendor_dlkm/modules.blocklist
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_fuxi
-TARGET_RECOVERY_DEVICE_MODULES := libinit_fuxi
+#TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_fuxi
+#TARGET_RECOVERY_DEVICE_MODULES := libinit_fuxi
 
 # Dtb/o
 BOARD_PREBUILT_DTBOIMAGE := $(KERNEL_PATH)/dtbo.img

@@ -5,6 +5,6 @@
 //
 
 runtime_resource_overlay {
-    name: "SettingsProviderResXiaomi13",
+    name: "SettingsProviderResfuxi",
     device_specific: true
 }

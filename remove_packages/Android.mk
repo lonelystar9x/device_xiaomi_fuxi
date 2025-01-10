@@ -5,39 +5,26 @@ LOCAL_MODULE := RemovePackages
 LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_TAGS := optional
 LOCAL_OVERRIDES_PACKAGES := \
+    GoogleTTS \
     Eleven \
     Etar \
     ExactCalculator \
     Jelly \
     Glimpse \
     Music \
+    Recorder \
     Seedvault \
     Updater \
-    CalculatorGoogle \
-    CalendarGoogle \
-    LatinImeGoogle \
-    MarkupGoogle \
-    MlkitBarcodeUIPrebuilt \
+    LatinIMEGooglePrebuilt \
     NgaResources \
-    PrebuiltExchange3Google \
-    SpeechServicesByGoogle \
-    talkback \
     VisionBarcodePrebuilt \
-    AndroidAutoStub \
-    PrebuiltGmsCoreSc_AdsDynamite \
-    PrebuiltGmsCoreSc_CronetDynamite \
-    PrebuiltGmsCoreSc_DynamiteLoader \
-    PrebuiltGmsCoreSc_DynamiteModulesA \
-    PrebuiltGmsCoreSc_DynamiteModulesC \
-    PrebuiltGmsCoreSc_GoogleCertificates \
-    PrebuiltGmsCoreSc_MapsDynamite \
-    PrebuiltGmsCoreSc_MeasurementDynamite \
+    AndroidAutoStubPrebuilt \
+    DevicePersonalizationPrebuiltPixel2020 \
+    DeviceIntelligenceNetworkPrebuilt \
     GooglePartnerSetup \
     GoogleRestore \
     Velvet \
-    WellbeingPrebuilt \
-    GoogleFeedback \
-    SetupWizard \
+    Twelve
 
 LOCAL_UNINSTALLABLE_MODULE := true
 LOCAL_CERTIFICATE := PRESIGNED
